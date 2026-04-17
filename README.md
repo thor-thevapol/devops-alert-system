@@ -84,14 +84,14 @@ python log_agent.py
 ---
 
 ### 4. Send test event
-
+Linux
 ```bash
 curl -X POST http://localhost:8000/event \
 -H "Content-Type: application/json" \
 -d '{"app":"test","level":"info","message":"hello"}'
 ```
-
-```Windows cmd
+Windows
+```bash
 curl -X POST http://localhost:8000/event ^
 -H "Content-Type: application/json" ^
 -d "{\"app\":\"test\",\"level\":\"info\",\"message\":\"hello\"}"
