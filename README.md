@@ -17,14 +17,27 @@ This system is designed to simulate a real-world DevOps workflow:
 
 ## 🧱 Architecture
 
-```text
-logs
-        ↓
-Python Agent (log reader)
-        ↓
-FastAPI Hub (event processing)
-        ↓
-Discord (alert notification)
+```mermaid
+flowchart LR
+%% ##### DEFINE #####
+logs[Logs]
+py_agent[Python Agent]
+py_fastapi[FastAPI Hub]
+discord_alert[Discord Alert]
+
+subgraph Future
+	alloy[Alloy]
+	loki[Loki]
+	grafana[Grafana]
+end
+
+%% ===== FLOW =====
+logs --> py_agent
+py_agent --> py_fastapi
+py_fastapi --> discord_alert
+
+alloy --> loki --> grafana
+grafana --> py_fastapi
 ```
 
 ---
