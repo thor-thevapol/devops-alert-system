@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 🚀 DevOps Alert System (Home Lab)
 
 A simple event-driven alerting system built on a self-hosted home lab environment.
@@ -159,6 +158,3 @@ Sensitive configurations (e.g., secrets, infrastructure details) are excluded fr
 
 Thor (Thevapol)
 DevOps learner building real-world systems 🚀
-=======
-# devops-alert-system
->>>>>>> 2582319d57c541cbf4ce3ebf28513aa517650e9c
