@@ -121,6 +121,21 @@ This project separates responsibilities into:
 
 ---
 
+## 🎯 Use Case
+
+This system simulates a real-world DevOps alerting workflow:
+
+- Detect application-level events from logs
+- Process events centrally
+- Send real-time alerts to communication platforms
+
+Useful for:
+- Self-hosted environments
+- Home lab monitoring
+- Learning observability and alerting systems
+
+---
+
 ## 🔮 Future Improvements
 
 * 📊 Integrate logging system with Loki
@@ -145,6 +160,14 @@ This project is part of a personal journey to learn:
 * DevOps practices
 * Observability concepts
 * Real-world system design
+
+---
+
+## ⚠️ Limitations
+
+- No authentication on API endpoint
+- No rate limiting
+- No retry mechanism for failed alerts
 
 ---
 
