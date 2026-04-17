@@ -157,4 +157,5 @@ Sensitive configurations (e.g., secrets, infrastructure details) are excluded fr
 ## 👨‍💻 Author
 
 Thor (Thevapol)
+
 DevOps learner building real-world systems 🚀
