@@ -20,7 +20,7 @@ This system is designed to simulate a real-world DevOps workflow:
 ```mermaid
 flowchart LR
 %% ##### DEFINE #####
-logs[Logs]
+logs[/Logs/]
 py_agent[Python Agent]
 py_fastapi[FastAPI Hub]
 discord_alert[Discord Alert]
@@ -63,6 +63,7 @@ grafana --> py_fastapi
 * ⚡ Event-based alerting system
 * 🔔 Discord integration for notifications
 * 🧩 Modular design (easy to extend for multiple apps)
+* 🐳 Dockerized services
 
 ---
 
@@ -77,21 +78,18 @@ cd devops-alert-system
 
 ---
 
-### 2. Run FastAPI Hub
+### 2. Setup environment
 
 ```bash
-cd fastapi-hub
-pip install -r requirements.txt
-uvicorn main:app --reload
+cp .env.example .env
 ```
 
 ---
 
-### 3. Run Log Agent
+### 3. Run with Docker
 
 ```bash
-cd agents
-python log_agent.py
+docker compose up -d
 ```
 
 ---
@@ -154,7 +152,6 @@ Useful for:
 * 📊 Integrate logging system with Loki
 * 📈 Add Grafana for visualization
 * 🔁 Alert deduplication / rate limiting
-* 🐳 Docker Compose setup for full system
 * 📡 Multi-service monitoring (NGINX, apps, etc.)
 
 ---
