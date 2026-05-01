@@ -1,0 +1,16 @@
+targets:
+  - app: telegram-bot
+    file: /logs/telegram/bot.log
+    rules:
+      - patterns: ["queued"]
+        level: info
+      - patterns: ["queue"]
+        level: info
+      - patterns: ["info","done"]
+        level: info
+      - patterns: ["info","emby"]
+        level: info
+      - patterns: ["info","เชื่อมต่อสำเร็จ"]
+        level: info
+      - patterns: ["error"]
+        level: error

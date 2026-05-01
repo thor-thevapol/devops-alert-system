@@ -1,0 +1,21 @@
+services:
+  fastapi-hub:
+    build: ./fastapi-hub
+    container_name: fastapi-hub
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    restart: always
+    
+  log-agent:
+    build: ./agents/log-agent
+    container_name: log-agent
+    depends_on:
+      - fastapi-hub
+    volumes:
+      - ./agents/log-agent/config.yaml:/app/config.yaml
+      - E:\NAS\infra\homelab-infra\telegrambot\logs:/logs/telegram
+    environment:
+      - FASTAPI_URL=http://fastapi-hub:8000/event
+    restart: always
